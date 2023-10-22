@@ -1,0 +1,187 @@
+/* Estilos generales del cuerpo */
+body {
+    /* Fondo */
+    background-image: url(./Img/fondo4.jpg);
+    background-repeat: repeat;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Fuente del texto */
+    color: #333;
+    /* Color del texto */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(236, 189, 214, 0.733);
+    /* Color de fondo con opacidad */
+    color: black;
+    /* Color del texto */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #e997de;
+    /* Color de fondo de la barra de navegación */
+}
+
+/* Lista de elementos de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    /* Elimina los marcadores de lista */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Botones de navegación */
+nav button {
+    background-color: #e997de;
+    color: #333;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Estilo al pasar el ratón por los botones de navegación */
+nav button:hover {
+    background-color: #fc00a8;
+    color: #fff;
+}
+
+/* Contenedor de imágenes */
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Envolver imágenes en pantallas pequeñas */
+}
+
+/* Descripciones de imágenes */
+.imagenes div {
+    width: 250px;
+    /* Tamaño fijo para las descripciones */
+    color: #05000f;
+    padding: 10px 10px;
+}
+
+/* Párrafos */
+p {
+    margin: 0;
+}
+
+/* Botón en el pie de página */
+footer button {
+    background-color: #5d2e8b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo al pasar el ratón por el botón del pie de página */
+footer button:hover {
+    background-color: #7a4ea8;
+}
+
+/* Sección de contenido */
+section {
+    background-color: rgba(250, 205, 244, 0.808);
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #fc00a8;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: #5d2e8b;
+    color: white;
+    margin-top: auto;
+    height: 15px;
+    margin-bottom: 0;
+}
+
+/* Media query para pantallas pequeñas (máximo 767px) */
+@media (max-width: 767px) {
+    header {
+        height: 60px;
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Cambia la dirección de la lista en pantallas pequeñas */
+    }
+
+    nav button {
+        margin: 5px 0;
+        /* Cambia el margen de los botones en pantallas pequeñas */
+    }
+
+    /* Imágenes en pantallas pequeñas */
+    .imagenes {
+        justify-content: center;
+        /* Centra las imágenes */
+    }
+
+    /* Descripciones de imágenes en pantallas pequeñas */
+    .imagenes div {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        padding: 5px;
+        text-align: center;
+        /* Centra el texto */
+    }
+
+    footer {
+        padding: 10px;
+        height: auto;
+        /* Ajusta la altura automáticamente */
+    }
+
+    footer button {
+        top: 130%;
+    }
+}
+
+/* Animación para mostrar contenido */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Clase para aplicar la animación de desvanecimiento */
+.show-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Estilo de transición para las imágenes */
+img {
+    transition: transform .2s;
+}
+
+/* Efecto al pasar el ratón por las imágenes */
+img:hover {
+    transform: scale(1.1);
+}
