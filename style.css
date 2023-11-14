@@ -1,63 +1,76 @@
 /* Estilos generales del cuerpo */
 body {
-    /* Fondo */
-    background-image: url(./imagen/fondo4.jpg);
-    background-repeat: repeat;
-    min-height: 100vh;
-    width: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    /* Fuente del texto */
-    color: #333;
-    /* Color del texto */
+    background-color: rgb(241, 234, 255); /* Fondo principal en el tono de rosa claro */
+    color: black; /* Cambio de color de texto a negro */
+    padding-top: 70px; /* Agrega espacio en la parte superior para el encabezado fijo */
+}
+
+/* Encabezado fijo */
+header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+}
+
+/* Barra de navegación fija */
+nav.fixed {
+    position: fixed;
+    top: 70px; /* La altura del encabezado fijo */
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
 }
 
 /* Encabezado */
 header {
+    background-color: rgb(208, 162, 247); /* Nuevo color (tono de morado claro) */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 100%;
-    background-color: rgba(236, 189, 214, 0.733);
-    /* Color de fondo con opacidad */
-    color: black;
-    /* Color del texto */
+    color: white; /* Cambiado el color del texto a blanco para mayor contraste */
     box-sizing: border-box;
     margin: 0;
+    text-align: center; /* Centra el contenido del encabezado */
 }
 
 /* Barra de navegación */
 nav {
-    background-color: #e997de;
-    /* Color de fondo de la barra de navegación */
-}
-
-/* Lista de elementos de navegación */
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    /* Elimina los marcadores de lista */
-    margin: 0;
-    box-sizing: border-box;
+    background-color: rgb(241, 234, 255); /* Tono de rosa claro */
+    text-align: center;
+    padding: 2px 0; /* Reducir el padding superior e inferior */
 }
 
 /* Botones de navegación */
 nav button {
-    background-color: #e997de;
+    background-color: rgb(241, 234, 255); /* Tono de rosa claro */
     color: #333;
-    margin: 0 10px;
+    margin: 0 5px; /* Reducir el margen entre los botones */
     border: none;
     cursor: pointer;
     text-decoration: none;
+    padding: 5px 10px;
 }
 
 /* Estilo al pasar el ratón por los botones de navegación */
 nav button:hover {
-    background-color: #fc00a8;
+    background-color: rgb(208, 162, 247); /* Tono de morado más oscuro */
     color: #fff;
+}
+
+/* Alineación horizontal de los botones de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
 }
 
 /* Contenedor de imágenes */
@@ -66,15 +79,22 @@ nav button:hover {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* Envolver imágenes en pantallas pequeñas */
+    background-color: rgb(220, 191, 255); /* Tono de morado claro */
+    padding: 20px;
 }
 
 /* Descripciones de imágenes */
 .imagenes div {
     width: 250px;
-    /* Tamaño fijo para las descripciones */
-    color: #05000f;
+    color: black; /* Cambio de color de texto a negro */
     padding: 10px 10px;
+    border: 1px solid #333; /* Agregar borde a las descripciones */
+    background-color: rgb(182, 130, 246); /* Tono de morado oscuro */
+}
+
+/* Estilo de los elementos h2 dentro de .imagenes div */
+.imagenes div h2 {
+    border-bottom: 2px solid #333; /* Agregar borde inferior a los h2 */
 }
 
 /* Párrafos */
@@ -84,7 +104,7 @@ p {
 
 /* Botón en el pie de página */
 footer button {
-    background-color: #5d2e8b;
+    background-color: rgb(220, 191, 255); /* Tono de morado claro */
     color: white;
     border: none;
     cursor: pointer;
@@ -92,15 +112,15 @@ footer button {
 
 /* Estilo al pasar el ratón por el botón del pie de página */
 footer button:hover {
-    background-color: #7a4ea8;
+    background-color: rgb(208, 162, 247); /* Tono de morado más oscuro */
 }
 
 /* Sección de contenido */
 section {
-    background-color: rgba(250, 205, 244, 0.808);
+    background-color: rgb(220, 191, 255); /* Tono de morado claro */
     margin: 20px;
     padding: 20px;
-    border: 1px solid #fc00a8;
+    border: 1px solid rgb(208, 162, 247); /* Tono de morado más oscuro */
     border-radius: 5px;
 }
 
@@ -110,7 +130,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    background-color: #5d2e8b;
+    background-color: rgb(220, 191, 255); /* Tono de morado claro */
     color: white;
     margin-top: auto;
     height: 15px;
@@ -119,45 +139,7 @@ footer {
 
 /* Media query para pantallas pequeñas (máximo 767px) */
 @media (max-width: 767px) {
-    header {
-        height: 60px;
-        font-size: 16px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        /* Cambia la dirección de la lista en pantallas pequeñas */
-    }
-
-    nav button {
-        margin: 5px 0;
-        /* Cambia el margen de los botones en pantallas pequeñas */
-    }
-
-    /* Imágenes en pantallas pequeñas */
-    .imagenes {
-        justify-content: center;
-        /* Centra las imágenes */
-    }
-
-    /* Descripciones de imágenes en pantallas pequeñas */
-    .imagenes div {
-        width: 100%;
-        /* Ocupa todo el ancho */
-        padding: 5px;
-        text-align: center;
-        /* Centra el texto */
-    }
-
-    footer {
-        padding: 10px;
-        height: auto;
-        /* Ajusta la altura automáticamente */
-    }
-
-    footer button {
-        top: 130%;
-    }
+    /* Estilos adicionales para pantallas pequeñas si es necesario */
 }
 
 /* Animación para mostrar contenido */
@@ -177,8 +159,50 @@ footer {
 }
 
 /* Estilo de transición para las imágenes */
-img {
-    transition: transform .2s;
+.imagenes img {
+    transition: transform .2s, opacity .5s;
+}
+
+/* Efecto al pasar el ratón por las imágenes */
+.imagenes img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos CSS para la sección de contacto */
+/* Estilos para la sección de contacto */
+.contacto {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(220, 191, 255); /* Tono de morado claro (igual que "sobre nosotros") */
+    border: 1px solid rgb(208, 162, 247); /* Tono de morado más oscuro */
+    border-radius: 5px;
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+}
+
+/* Estilos para las divisiones dentro de la sección de contacto */
+.contacto .info {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en una fila si no hay suficiente espacio */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+    margin-top: 20px;
+}
+
+/* Estilos para cada división dentro de .info */
+.contacto .info div {
+    flex: 1;
+    margin: 10px; /* Agrega espacio entre las divisiones */
+    padding: 10px;
+    background-color: rgb(182, 130, 246); /* Tono de morado oscuro */
+    border: 1px solid rgb(208, 162, 247); /* Borde tono morado más oscuro */
+    border-radius: 5px;
+    width: 10%; /* Ajusta el ancho al 100% de la ventana */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+}
+
+/* Estilos para el botón de WhatsApp */
+.contacto .info div button {
+    width: 100%;
 }
 
 /* Efecto al pasar el ratón por las imágenes */
