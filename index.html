@@ -1,99 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css"> <!-- Enlaza una hoja de estilos externa llamada "style.css" -->
+    <link rel="stylesheet" href="./style.css">
     <title>ChocoArtesanias</title>
+    <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
 </head>
-
 <body>
-    <header>
+    <!-- Encabezado -->
+    <header id="top">
         <h1>ChocoArte Delicioso</h1>
     </header>
+
+    <!-- Barra de navegación -->
     <nav>
         <ul>
-            <!-- Aquí se crea una barra de navegación con botones -->
-            <li><button class="btn btn-link">Inicio</button></li>
-            <li><button class="btn btn-link">Sobre nosotros</button></li>
-            <li><button class="btn btn-link">Contacto</button></li>
-            <li><button class="btn btn-link">Ubicación</button></li>
-            <li><button class="btn btn-link">Productos</button></li>
-            <li><button class="btn btn-link">Envíos</button></li>
-            <li><button class="btn btn-link">Carrito</button></li>
+            <!-- Botones de navegación enlazados a las secciones -->
+            <li><a href="#top" class="btn btn-link">Inicio</a></li>
+            <li><a href="#bombones" class="btn btn-link">Bombones</a></li>
+            <li><a href="#flores" class="btn btn-link">Flores</a></li>
+            <li><a href="#chocomensajes" class="btn btn-link">Chocomensajes</a></li>
+            <li><a href="#sobre-nosotros" class="btn btn-link">Sobre nosotros</a></li>
+            <li><a href="#contacto" class="btn btn-link">Contacto</a></li>
         </ul>
     </nav>
+
     <main>
-        <!-- Aquí comienza la sección principal del contenido -->
-        <section class="imagenes">
+        <!-- Sección de Bombones Artesanales -->
+        <section id="bombones" class="imagenes">
+            <!-- Contenido de la sección -->
             <div>
                 <h2>Bombones Artesanales</h2>
                 <p>Nuestros deliciosos bombones artesanales rellenos son una obra maestra culinaria que combina la
                     excelencia del chocolate con rellenos exquisitos. Cada bocado es una experiencia sensorial única que
                     te transportará a un mundo de sabor.</p>
             </div>
-            <!-- Aquí se presentan imágenes y texto relacionado con bombones artesanales -->
-            <!-- Las imágenes tienen atributos "src" para la ruta de la imagen y "alt" para texto alternativo -->
-            <img src="./imagen/bombones.jpg" alt="Ejemplo 1" width="250" height="250">
-            <img src="./imagen/bombones2.jpg" alt="Ejemplo 2" width="250" height="250">
-            <img src="./imagen/bombones3.jpg" alt="Ejemplo 3" width="250" height="250">
-            <img src="./imagen/bombones4.jpg" alt="Ejemplo 4" width="250" height="250">
-            <img src="./imagen/bombones5.jpg" alt="Ejemplo 5" width="250" height="250">
+            <!-- Imágenes relacionadas con bombones artesanales -->
+            <img src="./imagen/bombones.jpg" alt="Ejemplo 1" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/bombones2.jpg" alt="Ejemplo 2" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/bombones3.jpg" alt="Ejemplo 3" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/bombones4.jpg" alt="Ejemplo 4" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/bombones5.jpg" alt="Ejemplo 5" width="250" height="250" onclick="animateImageOnClick(this)">
         </section>
-        <section class="imagenes">
+
+        <!-- Sección de Flores de Chocolate Artesanales -->
+        <section id="flores" class="imagenes">
+            <!-- Contenido de la sección -->
             <div>
-                <h2>Flores de chocolate Artesanales</h2>
+                <h2>Flores de Chocolate Artesanales</h2>
                 <p>Nuestras Rosas de Chocolate Artesanales son una fusión perfecta de elegancia y sabor. Cada rosa está
                     meticulosamente elaborada a mano por nuestros expertos chocolateros, transformando el chocolate en
                     una obra de arte comestible.</p>
             </div>
-            <!-- Sección similar pero para flores de chocolate -->
-            <img src="./imagen/flores.jpg" alt="Ejemplo 1" width="250" height="250">
-            <img src="./imagen/flores2.jpg" alt="Ejemplo 2" width="250" height="250">
-            <img src="./imagen/flores3.jpg" alt="Ejemplo 3" width="250" height="250">
-            <img src="./imagen/flores4.jpg" alt="Ejemplo 4" width="250" height="250">
-            <img src="./imagen/flores5.jpg" alt="Ejemplo 5" width="250" height="250">
+            <!-- Imágenes relacionadas con flores de chocolate -->
+            <img src="./imagen/flores.jpg" alt="Ejemplo 1" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/flores2.jpg" alt="Ejemplo 2" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/flores3.jpg" alt="Ejemplo 3" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/flores4.jpg" alt="Ejemplo 4" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/flores5.jpg" alt="Ejemplo 5" width="250" height="250" onclick="animateImageOnClick(this)">
         </section>
-        <section class="imagenes">
+
+        <!-- Sección de Chocomensajes -->
+        <section id="chocomensajes" class="imagenes">
+            <!-- Contenido de la sección -->
             <div>
                 <h2>Chocomensajes</h2>
                 <p>Nuestros Mensajes de Chocolate Artesanales son una forma única y deliciosa de expresar tus
                     sentimientos. Cada mensaje se presenta en forma de exquisitos chocolates elaborados a mano,
                     diseñados para hacer que cada palabra cobre vida con sabor.</p>
             </div>
-            <!-- Sección similar pero para mensajes de chocolate -->
-            <img src="./imagen/mensaje.jpg" alt="Ejemplo 1" width="250" height="250">
-            <img src="./imagen/mensaje2.jpg" alt="Ejemplo 2" width="250" height="250">
-            <img src="./imagen/mensaje3.jpg" alt="Ejemplo 3" width="250" height="250">
-            <img src="./imagen/mensaje4.jpg" alt="Ejemplo 4" width="250" height="250">
-            <img src="./imagen/mensaje5.jpg" alt="Ejemplo 5" width="250" height="250">
+            <!-- Imágenes relacionadas con mensajes de chocolate -->
+            <img src="./imagen/mensaje.jpg" alt="Ejemplo 1" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/mensaje2.jpg" alt="Ejemplo 2" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/mensaje3.jpg" alt="Ejemplo 3" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/mensaje4.jpg" alt="Ejemplo 4" width="250" height="250" onclick="animateImageOnClick(this)">
+            <img src="./imagen/mensaje5.jpg" alt="Ejemplo 5" width="250" height="250" onclick="animateImageOnClick(this)">
+        </section>
+
+        <!-- Sección "Sobre nosotros" -->
+        <section id="sobre-nosotros">
+            <!-- Contenido de la sección -->
+            <h2>Sobre nosotros</h2>
+            <p>Somos ChocoArte Delicioso, una empresa con más de 10 años de experiencia dedicada a la creación de
+                delicias de chocolate artesanales. Nos encontramos en Isidro Casanova y nos enorgullece ofrecer productos
+                únicos que mezclan la pasión por el chocolate con la creatividad. Nuestra misión es llevar alegría y
+                sabor a cada bocado, utilizando ingredientes de la más alta calidad y técnicas de elaboración artesanal.
+            </p>
+            <p>En ChocoArte Delicioso, no solo hacemos chocolates, creamos experiencias. Nos especializamos en diseños
+                personalizados para satisfacer tus gustos y ocasiones especiales. Ya sea que estés buscando regalos
+                únicos o simplemente quieras deleitarte con algo especial, nuestros expertos chocolateros están aquí
+                para hacer tus sueños de chocolate realidad.</p>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto">
+            <!-- Contenido de la sección -->
+            <h2>Contacto</h2>
+
+            <div class="info">
+                <div>
+                    <p>Puedes ponerte en contacto con nosotros a través de correo electrónico:</p>
+                    <a href="mailto:tu-correo@dominio.com">fernando.tome99@hotmail.com</a>
+                </div>
+
+                <div>
+                    <p>O también puedes llamarnos al:</p>
+                    <a href="tel:+123456789">1132445700</a>
+                </div>
+
+                <div>
+                    <p>O haz clic en el siguiente botón para contactarnos por WhatsApp:</p>
+                    <a href="https://wa.me/1132445700" target="_blank">
+                        <button class="btn btn-primary">Contactar por WhatsApp</button>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Pie de página -->
     <footer>
-        <!-- Aquí comienza el pie de página -->
+        <!-- Contenido del pie de página -->
         <p>Derechos de autor © 2023 Fer :D</p>
-        <!-- Un párrafo que muestra el año de derechos de autor y el nombre "Fer :D" -->
         <button class="btn btn-primary">Botón de arrepentimiento</button>
-        <!-- Un botón con la clase "btn btn-primary" que podría tener un propósito específico, en este caso, "arrepentimiento." -->
     </footer>
-    <script>
-        // Este script agrega una clase 'show-content' al elemento 'body' después de un retraso de 120 milisegundos.
-        setTimeout(function () {
-            document.body.classList.add('show-content');
-        }, 120); 
-    </script>
 
+    <!-- Scripts de JavaScript y bibliotecas -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Este script enlaza y carga la biblioteca jQuery -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Este script enlaza y carga la biblioteca Popper.js -->
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Este script enlaza y carga la biblioteca Bootstrap -->
-    </script>
+    <script src="./script.js"></script> <!-- Enlaza tu archivo de script JS -->
 </body>
-
 </html>
