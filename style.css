@@ -2,10 +2,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(241, 234, 255); /* Fondo principal en el tono de rosa claro */
-    color: black; /* Cambio de color de texto a negro */
-    padding-top: 70px; /* Agrega espacio en la parte superior para el encabezado fijo */
+    background-color: rgb(241, 234, 255);
+    color: black;
+    padding-top: 70px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
+
+/* Mostrar el contenido cuando la clase show-content está presente */
+body.show-content {
+    opacity: 1;
+    transition: opacity 2s ease-in-out; /* Añadir transición de opacidad al mostrar el contenido */
+}
+
 
 /* Encabezado fijo */
 header.fixed {
@@ -41,7 +50,7 @@ header {
 nav {
     background-color: rgb(241, 234, 255); /* Tono de rosa claro */
     text-align: center;
-    padding: 2px 0; /* Reducir el padding superior e inferior */
+    padding: 5px 0; /* Reducir el padding superior e inferior */
 }
 
 /* Botones de navegación */
@@ -176,7 +185,6 @@ footer {
     background-color: rgb(220, 191, 255); /* Tono de morado claro (igual que "sobre nosotros") */
     border: 1px solid rgb(208, 162, 247); /* Tono de morado más oscuro */
     border-radius: 5px;
-    width: 100%; /* Ajusta el ancho al 100% de la ventana */
     box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
 }
 
@@ -196,11 +204,87 @@ footer {
     background-color: rgb(182, 130, 246); /* Tono de morado oscuro */
     border: 1px solid rgb(208, 162, 247); /* Borde tono morado más oscuro */
     border-radius: 5px;
-    width: 10%; /* Ajusta el ancho al 100% de la ventana */
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
     box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
 }
 
-/* Estilos para el botón de WhatsApp */
-.contacto .info div button {
+/* Estilos para el botón de Correo Electrónico */
+.contacto .info div:nth-child(1) button {
     width: 100%;
+    background-color: rgb(159, 65, 241); /* Nuevo color para el botón (tono de morado más oscuro) */
+    color: white; /* Cambiado el color del texto a blanco para mayor contraste */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Estilo al pasar el ratón por el botón de Correo Electrónico */
+.contacto .info div:nth-child(1) button:hover {
+    background-color: rgb(97, 34, 223); /* Tono de morado oscuro */
+}
+
+/* Estilos para el botón de Facebook */
+.contacto .info div:nth-child(2) button {
+    width: 100%;
+    background-color: rgb(159, 65, 241); /* Nuevo color para el botón (tono de morado más oscuro) */
+    color: white; /* Cambiado el color del texto a blanco para mayor contraste */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Estilo al pasar el ratón por el botón de Facebook */
+.contacto .info div:nth-child(2) button:hover {
+    background-color: rgb(97, 34, 223); /* Tono de morado oscuro */
+}
+
+/* Estilos para el botón de WhatsApp */
+.contacto .info div:nth-child(3) button {
+    width: 100%;
+    background-color: rgb(159, 65, 241); /* Nuevo color para el botón (tono de morado más oscuro) */
+    color: white; /* Cambiado el color del texto a blanco para mayor contraste */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Estilo al pasar el ratón por el botón de WhatsApp */
+.contacto .info div:nth-child(3) button:hover {
+    background-color: rgb(97, 34, 223); /* Tono de morado oscuro */
+}
+/* Botones de navegación */
+nav .btn-nav {
+    background-color: rgb(175, 146, 233); /* Tono de rosa claro */
+    color: #333;
+    margin: 0 5px; /* Reducir el margen entre los botones */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.5s, color 0.5s; /* Añadir transición de color y fondo */
+}
+
+/* Estilo al pasar el ratón por los botones de navegación */
+nav .btn-nav:hover {
+    background-color: rgb(134, 87, 230); /* Tono de morado oscuro */
+    color: #fff;
+}
+/* Encabezado fijo */
+header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(208, 162, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
 }
