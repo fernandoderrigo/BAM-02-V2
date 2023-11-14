@@ -204,8 +204,3 @@ footer {
 .contacto .info div button {
     width: 100%;
 }
-
-/* Efecto al pasar el ratón por las imágenes */
-img:hover {
-    transform: scale(1.1);
-}
