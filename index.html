@@ -7,27 +7,33 @@
     <link rel="stylesheet" href="./style.css">
     <title>ChocoArtesanias</title>
     <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
+
+    <!-- Añadir la clase show-content al cargar la página -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("show-content");
+        });
+    </script>
 </head>
 <body>
-    <!-- Encabezado -->
-    <header id="top">
+    <header class="fixed">
         <h1>ChocoArte Delicioso</h1>
     </header>
 
-    <!-- Barra de navegación -->
-    <nav>
+    <nav class="fixed">
+        <!-- Barra de navegación con botones enlazados a las secciones -->
         <ul>
-            <!-- Botones de navegación enlazados a las secciones -->
-            <li><a href="#top" class="btn btn-link">Inicio</a></li>
-            <li><a href="#bombones" class="btn btn-link">Bombones</a></li>
-            <li><a href="#flores" class="btn btn-link">Flores</a></li>
-            <li><a href="#chocomensajes" class="btn btn-link">Chocomensajes</a></li>
-            <li><a href="#sobre-nosotros" class="btn btn-link">Sobre nosotros</a></li>
-            <li><a href="#contacto" class="btn btn-link">Contacto</a></li>
+            <!-- Barra de navegación con botones enlazados a las secciones -->
+            <li><a href="#" class="btn btn-link btn-nav show-content">Inicio</a></li>
+            <li><a href="#bombones" class="btn btn-link btn-nav show-content">Bombones</a></li>
+            <li><a href="#flores" class="btn btn-link btn-nav show-content">Flores</a></li>
+            <li><a href="#chocomensajes" class="btn btn-link btn-nav show-content">Chocomensajes</a></li>
+            <li><a href="#sobre-nosotros" class="btn btn-link btn-nav show-content">Sobre nosotros</a></li>
+            <li><a href="#contacto" class="btn btn-link btn-nav show-content">Contacto</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="show-content">
         <!-- Sección de Bombones Artesanales -->
         <section id="bombones" class="imagenes">
             <!-- Contenido de la sección -->
@@ -49,7 +55,7 @@
         <section id="flores" class="imagenes">
             <!-- Contenido de la sección -->
             <div>
-                <h2>Flores de Chocolate Artesanales</h2>
+                <h2>Flores de chocolate Artesanales</h2>
                 <p>Nuestras Rosas de Chocolate Artesanales son una fusión perfecta de elegancia y sabor. Cada rosa está
                     meticulosamente elaborada a mano por nuestros expertos chocolateros, transformando el chocolate en
                     una obra de arte comestible.</p>
@@ -97,21 +103,22 @@
         <!-- Sección de Contacto -->
         <section id="contacto" class="contacto">
             <!-- Contenido de la sección -->
-            <h2>Contacto</h2>
+            <h2>Medios de contacto</h2>
 
             <div class="info">
                 <div>
-                    <p>Puedes ponerte en contacto con nosotros a través de correo electrónico:</p>
-                    <a href="mailto:tu-correo@dominio.com">fernando.tome99@hotmail.com</a>
+                    <a href="mailto:fernando.tome99@hotmail.com">
+                        <button class="btn btn-primary">Contactar por Correo Electrónico</button>
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="https://l.wl.co/l?u=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100013446857302%26mibextid%3DZbWKwL" target="_blank">
+                        <button class="btn btn-primary">Contactar por Facebook</button>
+                    </a>
                 </div>
 
                 <div>
-                    <p>O también puedes llamarnos al:</p>
-                    <a href="tel:+123456789">1132445700</a>
-                </div>
-
-                <div>
-                    <p>O haz clic en el siguiente botón para contactarnos por WhatsApp:</p>
                     <a href="https://wa.me/1132445700" target="_blank">
                         <button class="btn btn-primary">Contactar por WhatsApp</button>
                     </a>
