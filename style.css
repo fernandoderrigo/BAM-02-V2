@@ -118,7 +118,7 @@ nav .btn-nav:hover {
 /* Estilo del recuadro para las imágenes */
 .imagenes img {
     border-radius: 15%;
-    border: 5px solid rgb(134, 87, 230);
+    border: 2px solid rgb(134, 87, 230);
     box-sizing: border-box; /* Incluye el borde en el tamaño de la imagen */
     transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
@@ -134,7 +134,7 @@ nav .btn-nav:hover {
     width: 250px;
     color: black;
     padding: 10px 10px;
-    border: 5px solid rgb(134, 87, 230);
+    border: 2px solid rgb(134, 87, 230);
     background-color: rgb(182, 130, 246);
 }
 
