@@ -1,0 +1,409 @@
+/* Estilos generales del cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(232, 220, 254);
+    color: black;
+    padding-top: 70px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Mostrar el contenido cuando la clase show-content está presente */
+body.show-content {
+    opacity: 1;
+    transition: opacity 2s ease-in-out; /* Añadir transición de opacidad al mostrar el contenido */
+}
+
+/* Encabezado fijo */
+header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+}
+
+/* Barra de navegación fija */
+nav.fixed {
+    position: fixed;
+    top: 65px; /* La altura del encabezado fijo */
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
+}
+
+/* Encabezado */
+header {
+    background-color: rgb(208, 162, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center; /* Centra el contenido del encabezado */
+}
+
+/* Barra de navegación */
+nav {
+    background-color: rgb(232, 220, 254);
+    text-align: center;
+    padding-top: 15px; /* Reducir el padding superior e inferior */
+}
+
+/* Botones de navegación */
+nav button {
+    background-color: rgb(241, 234, 255);
+    color: #333;
+    margin: 0 5px; /* Reducir el margen entre los botones */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Estilo al pasar el ratón por los botones de navegación */
+nav button:hover {
+    background-color: rgb(208, 162, 247);
+    color: #fff;
+}
+
+/* Alineación horizontal de los botones de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+/* Contenedor de imágenes */
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(220, 191, 255);
+    padding: 20px;
+}
+
+/* Descripciones de imágenes */
+.imagenes div {
+    width: 250px;
+    color: black;
+    padding: 10px 10px;
+    border: 1px solid #333; /* Agregar borde a las descripciones */
+    background-color: rgb(182, 130, 246);
+}
+
+/* Estilo de los elementos h2 dentro de .imagenes div */
+.imagenes div h2 {
+    border-bottom: 2px solid #333; /* Agregar borde inferior a los h2 */
+}
+
+/* Párrafos */
+p {
+    margin: 0;
+}
+
+/* Botón en el pie de página */
+footer button {
+    background-color: rgb(220, 191, 255); 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo al pasar el ratón por el botón del pie de página */
+footer button:hover {
+    background-color: rgb(208, 162, 247); 
+}
+
+/* Sección de contenido */
+section {
+    background-color: rgb(220, 191, 255);
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgb(208, 162, 247);
+    border-radius: 15px;
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(220, 191, 255);
+    color: white;
+    margin-top: auto;
+    height: 15px;
+    margin-bottom: 0;
+}
+
+/* Media query para pantallas pequeñas (máximo 767px) */
+@media (max-width: 767px) {
+}
+
+/* Animación para mostrar contenido */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Clase para aplicar la animación de desvanecimiento */
+.show-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Estilo de transición para las imágenes */
+.imagenes img {
+    transition: transform .2s, opacity .5s;
+}
+
+/* Efecto al pasar el ratón por las imágenes */
+.imagenes img:hover {
+    transform: scale(1.1);
+}
+/* Estilos para la sección de contacto */
+.contacto {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(220, 191, 255);
+    border: 1px solid rgb(208, 162, 247); 
+    border-radius: 15px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+}
+
+/* Estilos para las divisiones dentro de la sección de contacto */
+.contacto .info {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en una fila si no hay suficiente espacio */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+    margin-top: 20px;
+}
+
+/* Estilos para cada división dentro de .info */
+.contacto .info div {
+    flex: 1;
+    margin: 10px; /* Agrega espacio entre las divisiones */
+    padding: 10px;
+    background-color: rgb(182, 130, 246);
+}
+
+/* Estilos para el botón de Correo Electrónico */
+.contacto .info div:nth-child(1) button {
+    width: 100%;
+    background-color: rgb(159, 65, 241);
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Estilo al pasar el ratón por el botón de Correo Electrónico */
+.contacto .info div:nth-child(1) button:hover {
+    background-color: rgb(97, 34, 223); 
+}
+
+/* Estilos para el botón de Facebook */
+.contacto .info div:nth-child(2) button {
+    width: 100%;
+    background-color: rgb(159, 65, 241); 
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Estilo al pasar el ratón por el botón de Facebook */
+.contacto .info div:nth-child(2) button:hover {
+    background-color: rgb(97, 34, 223);
+}
+
+/* Estilos para el botón de WhatsApp */
+.contacto .info div:nth-child(3) button {
+    width: 100%;
+    background-color: rgb(159, 65, 241); 
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Estilo al pasar el ratón por el botón de WhatsApp */
+.contacto .info div:nth-child(3) button:hover {
+    background-color: rgb(97, 34, 223); 
+}
+
+/* Botones de navegación */
+nav .btn-nav {
+    background-color: rgb(175, 146, 233); 
+    color: #333;
+    margin: 0 5px; /* Reducir el margen entre los botones */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.5s, color 0.5s; /* Añadir transición de color y fondo */
+    border-radius: 10px;
+}
+
+/* Estilo al pasar el ratón por los botones de navegación */
+nav .btn-nav:hover {
+    background-color: rgb(134, 87, 230); 
+    color: #fff;
+}
+
+/* Encabezado fijo */
+header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(208, 162, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+#sobre-nosotros{
+    text-align: justify; 
+    border-radius: 15px;
+
+}
+#flores,#Figuras,#chocomensajes,#bombones{
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+.imagenes img{
+border-radius: 15%;
+}
+/* Estilos para la sección del formulario */
+#contact-form {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(220, 191, 255); 
+    border: 1px solid rgb(208, 162, 247); 
+    border-radius: 15px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+}
+/* Estilos para la sección de consultas */
+#consultas {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(220, 191, 255); 
+    border: 1px solid rgb(208, 162, 247); 
+    border-radius: 15px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+    margin: 20px; /* Añade un margen alrededor de la sección */
+}
+
+/* Estilos para la sección de consultas */
+#consultas {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(193, 151, 245); 
+    border: 1px solid rgb(208, 162, 247); 
+    border-radius: 15px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+    margin: 20px 0; /* Ajusta el margen vertical */
+}
+
+/* Estilos para el formulario dentro de la sección de consultas */
+#my-form {
+    max-width: 100%; 
+    margin: auto; 
+}
+
+/* Estilo para los campos del formulario */
+#my-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#my-form input,
+#my-form textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para el botón de enviar del formulario */
+#my-form-button {
+    background-color: rgb(159, 65, 241);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Estilo al pasar el ratón por el botón de enviar */
+#my-form-button:hover {
+    background-color: rgb(97, 34, 223);
+}
+
+/* Estilo para el estado del formulario (éxito/error) */
+#my-form-status {
+    margin-top: 16px;
+    font-weight: bold;
+}
+/* Estilo de transición para las imágenes */
+.imagenes img {
+    transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Efecto al pasar el ratón por las imágenes */
+.imagenes img:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Ajusta los valores de la sombra según tus preferencias */
+}
+/* Efecto de desvanecimiento mientras se desplaza hacia abajo */
+.fade-on-scroll {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-on-scroll.hidden {
+    opacity: 0;
+}
+
+/* Estilo del loader */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+body {
+    scroll-behavior: smooth;
+}
