@@ -24,7 +24,8 @@ body {
 /* Mostrar el contenido cuando la clase show-content está presente */
 body.show-content {
     opacity: 1;
-    transition: opacity 2s ease-in-out; /* Añadir transición de opacidad al mostrar el contenido */
+    transition: opacity 2s ease-in-out;
+    /* Añadir transición de opacidad al mostrar el contenido */
 }
 
 /* Encabezado fijo */
@@ -47,9 +48,11 @@ header.fixed {
 /* Barra de navegación fija */
 nav.fixed {
     position: fixed;
-    top: 65px; /* La altura del encabezado fijo */
+    top: 65px;
+    /* La altura del encabezado fijo */
     width: 100%;
-    z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
+    z-index: 1000;
+    /* Asegura que la barra de navegación esté sobre otros elementos */
 }
 
 /* Barra de navegación */
@@ -59,6 +62,7 @@ nav {
     padding: 10px 0;
     height: 55px;
 }
+
 /* Alineación horizontal de los botones de navegación */
 nav ul {
     display: flex;
@@ -71,12 +75,14 @@ nav ul {
 nav .btn-nav {
     background-color: rgb(175, 146, 233);
     color: #333;
-    margin: 0 5px; /* Reducir el margen entre los botones */
+    margin: 0 5px;
+    /* Reducir el margen entre los botones */
     border: none;
     cursor: pointer;
     text-decoration: none;
     padding: 5px 10px;
-    transition: background-color 0.5s, color 0.5s; /* Añadir transición de color y fondo */
+    transition: background-color 0.5s, color 0.5s;
+    /* Añadir transición de color y fondo */
     border-radius: 10px;
 }
 
@@ -90,20 +96,41 @@ nav .btn-nav:hover {
 @media (max-width: 767px) {
     /* Ajustes de estilo para pantallas pequeñas */
     nav {
-        padding: 5px 0; /* Reducir aún más el padding superior e inferior en pantallas pequeñas */
+        padding: 5px 0;
+        /* Reducir aún más el padding superior e inferior en pantallas pequeñas */
     }
 
     nav ul {
-        flex-direction: row; /* Mantener la dirección en fila para que los elementos estén en línea horizontal */
-        align-items: center; /* Centrar los elementos en pantallas pequeñas */
+        flex-direction: row;
+        /* Mantener la dirección en fila para que los elementos estén en línea horizontal */
+        align-items: center;
+        /* Centrar los elementos en pantallas pequeñas */
     }
 
     nav .btn-nav {
-        margin: 5px 5px; /* Ajustar el margen en pantallas pequeñas */
-        font-size: 10px; /* Reducir aún más el tamaño del texto para pantallas pequeñas */
-        padding: 2px 6px; /* Ajustar más el relleno de los botones para pantallas pequeñas */
+        margin: 5px 5px;
+        /* Ajustar el margen en pantallas pequeñas */
+        font-size: 10px;
+        /* Reducir aún más el tamaño del texto para pantallas pequeñas */
+        padding: 2px 6px;
+        /* Ajustar más el relleno de los botones para pantallas pequeñas */
+    }
+
+    /* Centrar imágenes y descripciones */
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagenes img {
+        margin-bottom: 10px;
+    }
+
+    .imagenes div {
+        width: 100%;
     }
 }
+
 
 /* Contenedor de imágenes */
 .imagenes {
@@ -119,7 +146,8 @@ nav .btn-nav:hover {
 .imagenes img {
     border-radius: 15%;
     border: 2px solid rgb(134, 87, 230);
-    box-sizing: border-box; /* Incluye el borde en el tamaño de la imagen */
+    box-sizing: border-box;
+    /* Incluye el borde en el tamaño de la imagen */
     transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
@@ -140,7 +168,8 @@ nav .btn-nav:hover {
 
 /* Estilo de los elementos h2 dentro de .imagenes div */
 .imagenes div h2 {
-    border-bottom: 2px solid #333; /* Agregar borde inferior a los h2 */
+    border-bottom: 2px solid #333;
+    /* Agregar borde inferior a los h2 */
 }
 
 /* Párrafos */
@@ -187,21 +216,25 @@ footer {
     background-color: rgb(220, 191, 255);
     border: 10px solid rgb(208, 162, 247);
     border-radius: 15px;
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+    box-sizing: border-box;
+    /* Incluye el padding y el border en el ancho del elemento */
 }
 
 /* Estilos para las divisiones dentro de la sección de contacto */
 .contacto .info {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en una fila si no hay suficiente espacio */
-    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en una fila si no hay suficiente espacio */
+    justify-content: space-around;
+    /* Distribuye el espacio alrededor de los elementos */
     margin-top: 20px;
 }
 
 /* Estilos para cada división dentro de .info */
 .contacto .info div {
     flex: 1;
-    margin: 10px; /* Agrega espacio entre las divisiones */
+    margin: 10px;
+    /* Agrega espacio entre las divisiones */
     padding: 10px;
     background-color: rgb(182, 130, 246);
     border-radius: 10px;
@@ -262,7 +295,8 @@ footer {
     background-color: rgb(220, 191, 255);
     border: 1px solid rgb(208, 162, 247);
     border-radius: 15px;
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+    box-sizing: border-box;
+    /* Incluye el padding y el border en el ancho del elemento */
 }
 
 /* Estilos para la sección de consultas */
@@ -272,8 +306,10 @@ footer {
     background-color: rgb(193, 151, 245);
     border: 1px solid rgb(208, 162, 247);
     border-radius: 15px;
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
-    margin: 20px 0; /* Ajusta el margen vertical */
+    box-sizing: border-box;
+    /* Incluye el padding y el border en el ancho del elemento */
+    margin: 20px 0;
+    /* Ajusta el margen vertical */
 }
 
 /* Estilos para el formulario dentro de la sección de consultas */
